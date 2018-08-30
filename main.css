@@ -1,0 +1,66 @@
+.navDefault{
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: #00ffff;
+}
+
+button{
+    border:none;
+    background-color: #00008b;
+    width: 150px;
+    height: 50px;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.dropdownMenu{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    position: absolute; /*para sacarlo del flujo*/
+    left: 0px;
+    right: 0px;
+    top:50px;
+    width: 150px; /*tiene 40px de right padding*/
+    box-shadow: 3px 2px 1px 1px rgba(87,99,148,1);
+    transform: translateY(-100%); /*we send our menu out of the screen, 
+    so it is not visible*/
+}
+
+.dropdownLink{
+    text-decoration: none; /*quitamos los subrayados*/
+    display: block;
+    background-color: #00008b; 
+    color: white;
+    padding: 10px 5px;
+    /*we apply transitions so when we hover the links, the change is soft. 
+    Also take a look in the way we applied the transition here.*/
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out
+}
+
+.dropdownLink:hover{
+    color: #00008b;
+    background-color: white;
+}
+
+.dropdown {
+    width: 150px;
+    position: relative;
+}
+
+.dropdown:hover button{
+    background-color: #483D8B;
+}
+
+/*we want also that when you hover the button, the menu appears*/
+
+
+.dropdown:hover .dropdownMenu{
+    transform: traslateY(0);
+    
+}
+
