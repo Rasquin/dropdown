@@ -26,9 +26,11 @@ button{
     right: 0px;
     top:50px;
     width: 150px; /*tiene 40px de right padding*/
+    z-index:-1;/*we want or menu to stay behind the buttom*/
     box-shadow: 3px 2px 1px 1px rgba(87,99,148,1);
     transform: translateY(-100%); /*we send our menu out of the screen, 
     so it is not visible*/
+    transition:transform 0.5s ease-in-out;
 }
 
 .dropdownLink{
@@ -60,7 +62,7 @@ button{
 
 
 .dropdown:hover .dropdownMenu{
-    transform: traslateY(0);
+    transform: translateY(0);
     
 }
 
